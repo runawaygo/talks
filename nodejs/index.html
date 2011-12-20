@@ -1,0 +1,296 @@
+<!doctype html>
+<!-- in html5 <html>, <head>, <body> are optional, so let's save some bytes :) -->
+
+<!-- head -->
+<meta charset=utf-8>
+<title>Node.js</title>
+<script src="js/jquery-1.5.1.min.js" ></script>
+<style>
+	body{
+		background-color:#000;
+		color:#FFF;
+	}
+	slide
+	{
+		display:table;
+		 height:600px;
+		width:100%;
+		}
+	step
+	{}
+	big
+	{
+		  font-size:4.44em;
+	}
+	big2
+	{
+		font-size:3.33em;
+		display:block;
+	}
+	big3
+	{
+		font-size:2.22em;
+		display:block;
+	}
+		  
+	.page-v-center
+	{
+		 display:table-cell;
+		vertical-align:middle;
+		text-align: center;
+		width:100%;
+	 
+		
+	}
+	.center-image
+	{
+		 width:800px;
+		 text-align:center;
+	}
+	.page
+	{
+		text-align: center;
+		width:100%;
+	}
+	
+</style>
+
+<script>
+
+var slideFlag = -1;
+var currentSlide;
+var stepFlag = -1;
+var currentStep;
+var $slides = {};
+
+$(function(){
+	$slides = $("slide");
+	$slides.hide();	
+	NextSlide();
+	
+	$("body").keydown(test);
+	function test(event)
+	{
+		if(event.keyCode == '37') PreStep();
+		else if(event.keyCode == '38') PreSlide();
+		else if(event.keyCode == '40') NextSlide();
+		else if(event.keyCode == '39') NextStep();
+	}
+});
+	
+function ChangeSlide()
+{
+	if(currentSlide) currentSlide.fadeOut();
+	currentSlide = $($slides[slideFlag]);
+	currentSlide.fadeIn();
+	
+	if(currentSlide.find(".step").length>0)
+		NextStep();
+	}
+
+function PreSlide()
+{
+	stepFlag = -1;
+	if(slideFlag == 0) return;
+	slideFlag--;
+	ChangeSlide();
+	}	
+
+function NextSlide()
+{	
+	stepFlag = -1;
+	
+	if(currentSlide +1 == $slides.length) return;
+	slideFlag++;
+	ChangeSlide();
+	
+	}
+
+	
+function PreStep()
+{
+	var steps =  currentSlide.find(".step");
+	
+	steps.hide();
+	stepFlag--;
+	if(stepFlag <0) {PreSlide();return;};
+	
+	$(steps[stepFlag]).fadeIn();
+	
+	}
+function NextStep()
+{
+	
+	var steps =  currentSlide.find(".step");
+	
+	steps.hide();
+	stepFlag++;
+	if(stepFlag == steps.length) {NextSlide(); return;}
+	
+	
+	$(steps[stepFlag]).fadeIn();
+	
+}
+
+</script>
+
+
+<body>
+	<slide>
+    	<section class="page-v-center">
+        	<big2 class="step">初识Node.js</big2>
+			<div class="step">
+                <big2>
+					html5研究小组<br><br>
+					www.mhtml.com<br><br>
+					@秀野堂主<br><br>
+					cygwin
+				</big2>
+            </div>
+			<div class="step">
+                <big2>多人聊天室</big2>
+				<br/>
+				<br/>
+				<big3>
+					iframe刷新，ajax定时刷新，comet，flash socket
+				</big3>
+            </div>
+            <big2 class="step">WebSocket</big2>
+            <div  class="step">
+				<big2>多人协作画图</big2>
+            	<img style="width:800px;" src="img/nodejs-paint.jpg">
+				<big3>cnodejs.org</big3>
+            </div>
+        </section>
+    </slide>
+    
+	<slide>
+		<section class="page-v-center">
+		<big2 class="step">
+			使用Node.js
+		</big2>
+		<div class="step">
+			<big2>
+				使用javascript语言　弱类型　解释型　闭包<br/><br/>
+				基于V8引擎，可调用C编写的模块<br/><br/>
+				事件，异步，non-blocking<br/><br/>
+				方便的端口监听实现
+			</big2>
+		</div>
+		<big2 class="step">
+			模仿Minicooper的地图追踪游戏<br><br>
+			Demo
+		</big2>
+		<big2 class="step">
+			Timers<br/><br/>
+			WebSocket<br/>
+			<small>node.websocket.js<br>socket.io&amp;now.js</small>
+			<br/><br/>
+			googlemaps
+		</big2>
+		</section>
+	</slide>
+   
+	<slide>
+		<section class="page-v-center">
+        <big2 class="step">Node.js GUI</big2>
+		<div  class="step">
+		<big2>
+			Appcelerator Titanium Desktop
+		</big2>
+		<br><br>
+		<big3>
+			HTML+CSS+JavaScript Native Application
+		</big3>
+		</div>
+		<big2 class="step">
+			TermKit
+		</big2>
+		<img   class="center-image step"  src="img/termkit-2.png">
+		<img   class="center-image step"  src="img/termkit-6.png">
+		<img   class="center-image step"  src="img/termkit-9.png">			
+		<div>
+		</section>
+    </slide>
+   
+    <slide>
+    	<section class="page-v-center" >
+    		<big2 class="step">
+				nodeunit
+			</big2>
+			<div class="step">
+                <big3>
+					Simple syntax, powerful tools. <br><br>
+					Just export the tests from a module. <br><br>
+					Works with node.js and in the browser.<br><br>
+					Testing asynchronous code<br><br>
+					SetUp and tearDown<br><br>
+					Allows the use of mocks and stubs
+				</big3>
+            </div>
+			<big2 class="step">Demo</big2>
+    	</section>        
+    </slide>
+    <slide>
+    	<section class="page-v-center" >
+    		<big2 class="step">
+				expresso
+			</big2>
+			<div class="step">
+                <big3>
+					TDD<br><br>
+					Additional assertion methods<br><br>
+					Code coverage via node-jscoverage<br><br>
+					CI<br><br>
+				</big3>
+            </div>
+    	</section>        
+    </slide>
+	<slide>
+		<section class="page-v-center" >
+    		<big2>
+				Node.js 托管服务器
+			</big2>
+			<br>
+			<div class="step">
+                <big3>
+					no.de<br><br>
+					heroku<br><br>
+					jsapp<br><br>
+					cnode app engine
+				</big3>
+            </div>
+    	</section>
+	</slide>
+    <slide>
+    	<h1 style=" margin-top:100px;">齐家治国平天下</h1>
+    	<section class="page-v-center">
+			<img src="img/superwolf.jpeg"  >
+            
+	   	 	<big style=" vertical-align:top;display:inline-block;">青山老妖 <br><small id="fullname">黄冠</small></big>
+            <br>
+			<h1>@青山老妖_黄冠</h1>
+            <h2>创业中，软件工程师，非专业产品设计师</h2>
+			<h2>理想主义，Geek，敏捷，html5</h2>
+         </section>
+         <h1  style=" margin-top:100px;">吃饭睡觉写代码</h1>
+	</slide>
+    <slide>
+    	<section class="page-v-center">
+       
+        <img src="img/jobsyou.jpg%0D">
+        <big2>知乎者也</big2></section>
+        </section>
+    </slide>
+</body>
+
+
+<!-- <footer>
+<p>
+    Taskboard 10k by <a href=http://twitter.com/bartaz>@bartaz</a>.
+    Inspired by <a href=http://taskboard.cognifide.com>Cognifide's Taskboard</a>.
+    Icons from <a href=http://p.yusukekamiyamane.com>Fugue Icon set</a>.
+</p>
+</footer> -->
+
+<!-- behaviour -->

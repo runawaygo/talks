@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->  <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	
+	<title>Node Party</title>
+	
+	<meta name="description" content="A jQuery library for modern HTML presentations">
+	<meta name="author" content="Caleb Troughton">
+	<meta name="viewport" content="width=1024, user-scalable=no">
+	
+	<!-- Core and extension CSS files -->
+	<link rel="stylesheet" href="../core/deck.core.css">
+	<link rel="stylesheet" href="../extensions/goto/deck.goto.css">
+	<link rel="stylesheet" href="../extensions/menu/deck.menu.css">
+	<link rel="stylesheet" href="../extensions/navigation/deck.navigation.css">
+	<link rel="stylesheet" href="../extensions/status/deck.status.css">
+	<link rel="stylesheet" href="../extensions/hash/deck.hash.css">
+	
+	<!-- Theme CSS files (menu swaps these out) -->
+	<link rel="stylesheet" id="style-theme-link" href="../themes/style/neon.css">
+	<link rel="stylesheet" id="transition-theme-link" href="../themes/transition/horizontal-slide.css">
+	
+	<!-- Custom CSS just for this page -->
+	<link rel="stylesheet" href="cnodejs.css">
+	
+	<script src="../modernizr.custom.js"></script>
+</head>
+
+<body class="deck-container">
+
+
+<section class="slide">
+	<h2>Node Party &nbsp;&nbsp;<small style="color:#ee0;">by <u>cnodejs.org</u> @SH</small></h2>
+	<ol id="schedule-list">
+		<li>
+			<h3>1:30 - 签到</h3>
+		</li>		 
+		<li>         
+			<h3>2:00 - @小型笨蛋 Node与GUI </h3>
+		</li>		 
+		<li>         
+			<h3>2:45 - @Literal 教你玩转NAE </h3>
+		</li>		 
+		<li>         
+			<h3>3:30 - 茶歇</h3>
+		</li>		 
+		<li>         
+			<h3>3:30 - Node Job</h3>
+		</li>	     
+		<li>         
+			<h3>3:50 - @belleveinvis Node与游戏开发</h3>
+		</li>	     
+		<li>         
+			<h3>4:30 - @虚小逸的小宇宙 高性能中间层之nodefox</h3>
+		</li>        
+		<li>         
+			<h3>5:10 - @朝沐金风 Node C/C++扩展教程</h3>
+		</li>
+		<li>         
+			<h3>AA聚餐</h3>
+		</li>
+	</ol>
+</section>
+
+<a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+<a href="#" class="deck-next-link" title="Next">&#8594;</a>
+
+<p class="deck-status">
+	<span class="deck-status-current"></span>
+	<span class="deck-status-total"></span>
+</p>
+
+<form action="." method="get" class="goto-form">
+	<label for="goto-slide">Go to slide:</label>
+	<input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+	<datalist id="goto-datalist"></datalist>
+	<input type="submit" value="Go">
+</form>
+
+<a href="." title="Permalink to this slide" class="deck-permalink">#</a>
+
+
+  <!-- Grab CDN jQuery, with a protocol relative URL; fall back to local if offline -->
+  <script src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="../jquery-1.7.min.js"><\/script>')</script>
+
+<!-- Deck Core and extensions -->
+<script src="../core/deck.core.js"></script>
+<script src="../extensions/hash/deck.hash.js"></script>
+<script src="../extensions/menu/deck.menu.js"></script>
+<script src="../extensions/goto/deck.goto.js"></script>
+<script src="../extensions/status/deck.status.js"></script>
+<script src="../extensions/navigation/deck.navigation.js"></script>
+
+<!-- Specific to this page -->
+
+<script src="cnodejs.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->  <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	
+	<title>Getting Started with deck.js</title>
+	
+	<meta name="description" content="A jQuery library for modern HTML presentations">
+	<meta name="author" content="Caleb Troughton">
+	<meta name="viewport" content="width=1024, user-scalable=no">
+	
+	<!-- Core and extension CSS files -->
+	<link rel="stylesheet" href="../core/deck.core.css">
+	<link rel="stylesheet" href="../extensions/goto/deck.goto.css">
+	<link rel="stylesheet" href="../extensions/menu/deck.menu.css">
+	<link rel="stylesheet" href="../extensions/navigation/deck.navigation.css">
+	<link rel="stylesheet" href="../extensions/status/deck.status.css">
+	<link rel="stylesheet" href="../extensions/hash/deck.hash.css">
+	
+	<!-- Theme CSS files (menu swaps these out) -->
+	<link rel="stylesheet" id="style-theme-link" href="../themes/style/neon.css">
+	<link rel="stylesheet" id="transition-theme-link" href="../themes/transition/horizontal-slide.css">
+	
+	<!-- Custom CSS just for this page -->
+	<link rel="stylesheet" href="introduction.css">
+	
+	<script src="../modernizr.custom.js"></script>
+</head>
+
+<body class="deck-container">
+<section class="slide" id="title-slide">
+	<h1>
+		液体印象网站设计
+	</h1>
+</section>
+
+<section class="slide" id='code1'>
+	<h2>自我介绍 - 黄冠</h2>
+	<p>&nbsp;</p>
+	<ol>
+		<li class='slide'>
+			<h3>前Microsoft MSNBC Team前端工程师</h3>
+		</li>
+		<li class='slide'>
+			<h3>上海魏玛软件创始人</h3>
+		</li>
+		<li class='slide'>
+			<h3>HTML5小组讲师</h3>
+		</li>
+		<li class='slide'>
+			<h3>CNodejs社区上海负责人</h3>
+		</li>
+	</ol>
+</section>
+
+<section class="slide" id='code1'>
+	<h2>HTML5小组</h2>
+	<p>&nbsp;</p>
+	<ol>
+		<li class='slide'>
+			<h3>非营利性线下社区</h3>
+		</li>
+		<li class='slide'>
+			<h3>推广宣传使用HTML5技术</h3>
+		</li>
+		<li class='slide'>
+			<h3>拥有大量的一流游戏开发人员，Web应用开发人员，设计师</h3>
+		</li>
+	</ol>
+</section>
+
+<section class="slide" id="coffeescript">
+	<h1>作品展示</12>
+</section>
+
+<section class="slide works" id = "art-works">
+	<h2>美工作品</h2>
+	<a><img class="slide" src="asserts/uu-game-center.png"/></a>
+	<a><img class="slide" src="asserts/uu-game-station.png"/></a>
+	<a><img class="slide" src="asserts/dd-ipad.png"/></a>
+	<a><img class="slide" src="asserts/dd-ipad-template.png"/></a>
+	<a><img class="slide" src="asserts/dd-iphone.png"/></a>	
+	<a><img class="slide" src="asserts/dd-iphone-2.png"/></a>
+	<a><img class="slide" src="asserts/dd-iphone-3.png"/></a>
+	<a><img class="slide" src="asserts/dd-iphone-4.png"/></a>
+	<a><img class="slide" src="asserts/dd-iphone5.png"/></a>		
+	<a><img class="slide" src="asserts/fashion.png"/></a>			
+</section>
+
+<section class="slide works" id = "dev-works">
+	<h2>程序作品</h2>
+	<a href="http://qugaoding.com/mapnote/client/index.html" target="blank"><img class="slide" src="asserts/mapnote.png"/></a>
+	<a href="http://qugaoding.com/bin/index.html"  target="blank"><img class="slide" src="asserts/mindmap.png"/></a>
+	<a><img class="slide" src="asserts/qugaoding.png"/></a>			
+	<a><img class="slide" src="asserts/cases.png"/></a>				
+	<a><img class="slide" src="asserts/resources-wiki.png"/></a>				
+</section>
+
+
+
+<section class="slide">
+	<h2>网站定位</h2>
+	<ol>
+		<li class='slide'>
+			<h3>企业形象展示</h3>
+		</li>
+		<li class='slide'>
+			<h3>吸引客户</h3>
+		</li>
+		<li class='slide'>
+			<h3>招募人才</h3>
+		</li>
+	</ol>
+</section>
+
+
+
+<section class="slide">
+	<h2>网站设计</h2>
+	<ol>
+		<li class='slide'>
+			<h3>UI设计</h3>
+			<ol>
+				<li>我们设计两个主题稿供参考选择</li>
+				<li>通过Canvas或者CSS3来制作主页面的动画效果</li>
+			</ol>
+		</li>
+		<li class='slide'>
+			<h3>Single Page Application</h3>
+			<ol>
+				<li>Make a web application but not website</li>
+				<li>无刷新</li>
+				<li>书签式进入，URL可记录网站状态，有利于分发以及浏览器重定向</li>
+				<li>通过横向滑动或者竖向滑动增加用户的空间感觉</li>
+			</ol>
+		</li>
+		<li class='slide'>
+			<h3>响应式页面设计</h3>
+			<p>
+				网站可以自动适应当前屏幕的大小
+			</p>
+		</li>
+		<li class='slide'>
+			<h3>离线依然可用</h3>
+			<p>
+				当网站被第一次加载后，即便用户没有链接互联网，用户依然可以看到之前浏览的数据
+			</p>
+		</li>
+	</ol>
+</section>
+
+<section class="slide">
+	<h2>多设备支持</h2>
+	<ol>
+		<li class='slide'>
+			<h3>大尺寸移动设备</h3>
+		</li>
+		<li class='slide'>
+			<h3>小尺寸移动设备</h3>
+			<p>需要重新设计用户体验和功能布局</p>
+		</li>
+	</ol>
+</section>
+<section class="slide">
+	<h2>所用技术列表</h2>
+	<ol>
+		<li class='slide'>
+			Application Manifest Cache
+		</li>
+		<li class='slide'>
+			Web Storage
+		</li>
+		<li class='slide'>
+			History
+		</li>
+		<li class='slide'>
+			Graceful Degradation Video (you can play video on iPad or iPhone)
+		</li>
+		<li class='slide'>
+			Canvas
+		</li>
+		<li class='slide'>
+			<h3>CSS3 Features</h3>
+			<ol>
+				<li>Animation</li>
+				<li>Transition</li>
+				<li>Translate</li>
+				<li>Skew</li>												
+			</ol>
+		</li>
+		<li class='slide'>
+			Coffee Script
+		</li>
+		<li class='slide'>
+			Less
+		</li>
+		<li class='slide'>
+			Seajs
+		</li>
+		<li class='slide'>
+			PHP or Python
+		</li>
+		<li class='slide'>
+			MySql
+		</li>
+	</ol>
+</section>
+
+<section class="slide">
+	<h1>开发周期 - 2个月</h1>
+</section>
+
+<a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+<a href="#" class="deck-next-link" title="Next">&#8594;</a>
+
+<p class="deck-status">
+	<span class="deck-status-current"></span>
+	/
+	<span class="deck-status-total"></span>
+</p>
+
+<form action="." method="get" class="goto-form">
+	<label for="goto-slide">Go to slide:</label>
+	<input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+	<datalist id="goto-datalist"></datalist>
+	<input type="submit" value="Go">
+</form>
+
+<a href="." title="Permalink to this slide" class="deck-permalink">#</a>
+
+
+  <!-- Grab CDN jQuery, with a protocol relative URL; fall back to local if offline -->
+  <script src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="../jquery-1.7.min.js"><\/script>')</script>
+
+<!-- Deck Core and extensions -->
+<script src="../core/deck.core.js"></script>
+<script src="../extensions/hash/deck.hash.js"></script>
+<script src="../extensions/menu/deck.menu.js"></script>
+<script src="../extensions/goto/deck.goto.js"></script>
+<script src="../extensions/status/deck.status.js"></script>
+<script src="../extensions/navigation/deck.navigation.js"></script>
+
+<!-- Specific to this page -->
+
+<script src="introduction.js"></script>
+
+</body>
+
+</html>

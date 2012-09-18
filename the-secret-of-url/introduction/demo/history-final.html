@@ -1,0 +1,73 @@
+<html>
+	<div class='root'>
+		<div>
+			<button class="btn" id="backBtn">back</button>		
+			<button class="btn" id="forwardBtn">forward</button>
+			<input  id="goInput" style="height:28px;width:50px;"></input>
+			<button class ="btn" id="goBtn">go</button>
+		</div>
+		<ul>
+			<li><a id='mac' href="#mac">Mac</a></li>
+			<li><a id='windows' href="#windows">Windows</a></li>
+			<li><a id='linux' href="#linux">Linux</a></li>							
+		</ul>
+	</div>
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	<style>
+		.highLight{
+			background-color:black;
+			color:white;
+		}
+		html{
+			width:100%;
+			height:100%;
+		}
+		.root{
+			padding:100px;
+		}
+		li a{
+			cursor:pointer;
+		}
+		
+		li a:target{
+			background-color:black;
+			color:white;
+		}
+	</style>
+	<script src="jquery-1.7.min.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+		
+		$(function(){
+			$('li a').click(function(e){
+				highLight(this)
+				navigateTo(this.id)
+			})
+			$('#backBtn').click(function(e){
+				history.back()
+			})
+			$('#forwardBtn').click(function(e){
+				history.forward()
+			})
+			$('#goBtn').click(function(e){
+				var value = $('#goInput').val()
+				value = parseInt(value)
+				history.go(value)
+			})
+		})
+		function navigateTo(name){
+			history.pushState({hashTag:name},name,"#"+name)
+			history.go()
+		}
+		function highLight(element){
+			$('a').removeClass('highLight')
+			$(element).addClass('highLight')
+		}
+		
+		window.onpopstate = function(e){
+			var regexTag = /#.*/
+			var hashTag = regexTag.exec(window.location)
+			if(hashTag === null) return
+			//highLight(hashTag[0])
+		}
+	</script>
+</html>

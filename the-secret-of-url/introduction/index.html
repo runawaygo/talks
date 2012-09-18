@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->  <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	
+	<title>The Secret Of URL</title>
+	
+	<meta name="description" content="A jQuery library for modern HTML presentations">
+	<meta name="author" content="Caleb Troughton">
+	<meta name="viewport" content="width=1024, user-scalable=no">
+	
+	<!-- Core and extension CSS files -->
+	<link rel="stylesheet" href="../core/deck.core.css">
+	<link rel="stylesheet" href="../extensions/goto/deck.goto.css">
+	<link rel="stylesheet" href="../extensions/menu/deck.menu.css">
+	<link rel="stylesheet" href="../extensions/navigation/deck.navigation.css">
+	<link rel="stylesheet" href="../extensions/status/deck.status.css">
+	<link rel="stylesheet" href="../extensions/hash/deck.hash.css">
+	
+	<!-- Theme CSS files (menu swaps these out) -->
+	<link rel="stylesheet" id="style-theme-link" href="../themes/style/neon.css">
+	<link rel="stylesheet" id="transition-theme-link" href="../themes/transition/horizontal-slide.css">
+	
+	<!-- Custom CSS just for this page -->
+	<link rel="stylesheet" href="introduction.css">
+	
+	<script src="../modernizr.custom.js"></script>
+</head>
+
+<body class="deck-container">
+<section class="slide" id="title-slide">
+	<h1>
+		The Secret Of URL
+	</h1>
+</section>
+
+<section class="slide">
+	<h2>Single Page Application</h2>
+	<p>&nbsp;</p>
+	<ol>
+		<li class='slide'>
+			<h3>Features</h3>
+			<ol>
+				<li>None Refresh</li>
+				<li>Hash Base Url</li>				
+			</ol>
+		</li>		
+		<li class='slide'>
+			<h3>Examples</h3>
+			<ol>
+				<li><a href="http://blog.sina.com.cn/twocold">http://blog.sina.com.cn/twocold</a></li>
+				<li><a href="http://t.cn/hDJ7J1">http://t.cn/hDJ7J1</a></li>
+
+				<li><a href="http://logotime.com/">http://logotime.com/</a></li>
+				<li><a href="http://www.charlestonrestaurant.com">http://www.charlestonrestaurant.com</a></li>
+			</ol>
+		</li>
+	</ol>
+</section>
+
+<section class="slide">
+	<h2>HTML5 History API - window.history</h2>
+	<p>&nbsp;</p>
+	<ol>
+		<li class='slide'>
+			<h3>Properties</h3>
+			<ol>
+				<li>history.length</li>
+				<li>history.state</li>				
+			</ol>
+		</li>
+		
+		<li class='slide'>
+			<h3>Action Methods</h3>
+			<ol>
+				<li>history.forward()</li>
+				<li>history.back()</li>
+				<li>history.go([delta])</li>
+			</ol>
+		</li>
+		<li class='slide'>
+			<h3>history.pushState(data, title [, url ] )</h3>
+			<p>
+				Pushes the given data onto the session history, with the given title, and, if provided, the given URL.				
+			</p>
+		</li>
+		<li class='slide'>
+			<h3>history.replaceState(data, title [, url ] )</h3>
+			<p>
+				Updates the current entry in the session history to have the given data, title, and, if provided, URL.
+			</p>
+		</li>
+		<li class='slide'>
+			<h3>window.onpopstate</h3>
+			<p>
+				Trigger when the history.state changed
+			</p>
+		</li>
+	</ol>
+</section>
+
+<section class="slide">
+	<h2>Code Demo</h2>
+	<p>&nbsp;</p>
+	<ol>
+		<li class='slide'>
+			<h3>Go, Forward, Back</h3>
+		</li>
+		<li class='slide'>
+			<h3>Handle history states</h3>
+		</li>
+		<li class='slide'>
+			<h3>Listen onpopstate event</h3>
+		</li>
+		<li class='slide'>
+			<h3>Play with target</h3>
+		</li>
+	</ol>
+</section>
+
+<section class="slide">
+	<h2>Conclusion</h2>
+	<p>&nbsp;</p>
+	<ol>
+		<li class='slide'>
+			<h3>Handle the states logic in onpopstate event</h3>
+		</li>
+		<li class='slide'>
+			<h3>Take advantage of target class but be careful</h3>
+		</li>
+	</ol>
+</section>
+
+<section class="slide">
+	<h2>CSS3 Animation</h2>
+	<p>&nbsp;</p>
+	<ol>
+		<li class='slide'>
+			<h3><a href="http://daneden.me/animate">Animation gallery</a></h3>
+		</li>
+		<li class='slide'>
+			<h3><a href="demo/border-animate.html">Special animation</a></h3>
+		</li>
+	</ol>
+</section>
+
+<section class="slide">
+	<h2>CSS3 Blur Effect</h2>
+	<p>&nbsp;</p>
+	<ol>
+		<li class='slide'>
+			<h3>Shadow</h3>
+			<ol>
+				<li>text-shadow:2px 2px 2px #000;</li>
+				<li>box-shadow:2px 2px 2px #000;</li>				
+			</ol>
+		</li>
+		<li class='slide'>
+			<h3>Blur</h3>
+			<ol>
+				<li>Blur text</li>
+				<li>Blur element</li>				
+			</ol>
+		</li>
+	</ol>
+</section>
+
+<section class='slide'>
+	<h2>知乎者也 -&gt; Q&amp;A</h2>
+	<p>&nbsp;</p>
+	<ol>
+		<li>
+			<h3>Self-Introduction</h3>
+			<ol>
+				<li>@青山老妖_黄冠</li>
+				<li>huangguan3112789@gmail.com</li>
+				<li>创业中，需要人</li>
+				<li>CNode社区上海负责人</li>				
+			</ol>
+		</li>
+		<li><h3>github: https://github.com/runawaygo/the-secret-of-url</h3></li>
+		<li><h3>slide: http://qugaoding.com/the-secret-of-url/introduction/index.html</h3></li>
+	</ol>
+</section>
+
+<section class='slide'>
+	<h2>Resources</h2>
+	<p>&nbsp;</p>
+	<ol>
+		<li>
+			<h3>Demos</h3>
+			<ol>
+				<li><a href="http://www.charlestonrestaurant.com">Single Page Application</a></li>
+				<li><a href="http://qugaoding.com/the-secret-of-url/introduction/demo/history-final.html">History</a></li>
+				<li><a href="http://daneden.me/animate/">Animate.css</a></li>
+				<li><a href="http://qugaoding.com/the-secret-of-url/introduction/demo/border-animate.html">Border animate</a></li>
+				<li><a href="http://qugaoding.com/the-secret-of-url/introduction/demo/shadow-blur.html">Shadow &amp; Blur</a></li>
+			</ol>
+		</li>
+		<li>
+			<h3>References</h3>
+			<ol>
+				<li>http://dev.w3.org/html5/spec-author-view/history.html</li>
+				<li>https://developer.mozilla.org/en/DOM/Manipulating_the_browser_history</li>
+				<li>http://www.w3.org/TR/CSS/</li>
+				<li>https://github.com/daneden/animate.css</li>
+			</ol>
+		</li>
+		
+	</ol>
+</section>
+
+<a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+<a href="#" class="deck-next-link" title="Next">&#8594;</a>
+
+<p class="deck-status">
+	<span class="deck-status-current"></span>
+	<span class="deck-status-total"></span>
+</p>
+
+<form action="." method="get" class="goto-form">
+	<label for="goto-slide">Go to slide:</label>
+	<input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+	<datalist id="goto-datalist"></datalist>
+	<input type="submit" value="Go">
+</form>
+
+<a href="." title="Permalink to this slide" class="deck-permalink">#</a>
+
+
+  <!-- Grab CDN jQuery, with a protocol relative URL; fall back to local if offline -->
+  <script src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="../jquery-1.7.min.js"><\/script>')</script>
+
+<!-- Deck Core and extensions -->
+<script src="../core/deck.core.js"></script>
+<script src="../extensions/hash/deck.hash.js"></script>
+<script src="../extensions/menu/deck.menu.js"></script>
+<script src="../extensions/goto/deck.goto.js"></script>
+<script src="../extensions/status/deck.status.js"></script>
+<script src="../extensions/navigation/deck.navigation.js"></script>
+
+<!-- Specific to this page -->
+
+<script src="introduction.js"></script>
+
+</body>
+
+</html>

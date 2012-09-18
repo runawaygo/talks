@@ -1,0 +1,121 @@
+<html>
+	<style >
+		html{
+			width:100%;
+			height:100%;
+		}
+		.panel{
+			padding:100px;
+			height:1200px;
+		}
+		.item{
+			padding:10px;
+			margin-bottom:20px;
+		}
+		
+		.text-shadow{
+			text-shadow:10px 10px 2px black;
+		}
+		.box-shadow{
+			box-shadow:10px 10px 10px black;
+		}
+		
+		
+		.text-blur,.box-blur,.box-blur h1,.box-blur h2{
+			-webkit-transition: 0.6s ease;
+			-moz-transition: 0.6s ease;
+			-ms-transition: 0.6s ease;
+			-o-transition: 0.6s ease;
+			transition: 0.6s ease;
+		}
+		
+		.text-blur{
+			text-shadow:0px 0px 3px black;
+			color:transparent;
+		}
+		.text-blur:hover{
+			text-shadow:none;
+			color:black;			
+		}
+		
+		
+		.box-blur-outer{
+			background-color:gray;
+			padding:20px;
+			text-align:center;
+		}
+
+		
+		.box-blur{			
+			-webkit-transform: scale(0.8);
+			-moz-transform: scale(0.8);
+			-ms-transform: scale(0.8);
+			-o-transform: scale(0.8);
+			transform: scale(0.8);
+			
+			
+			display:inline-block;
+			box-shadow:0 0 15px #aaa;
+		}
+		.box-blur h1{
+			margin:0px;
+			padding:10px;
+			background-color:white;
+			color:transparent;
+			text-shadow:0 0 3px black;
+			border-radius:5px 5px 0px 0px;
+			box-shadow:0 0 10px white;
+		}
+		.box-blur h2{
+			margin:0px;
+			padding:3px;
+			
+			background-color:black;
+			color:transparent;
+			text-shadow:0 0 3px white;
+			border-radius:0px 0px 5px 5px;
+			box-shadow:0 0 10px black;
+		}
+		
+		.box-blur:hover{
+			-webkit-transform: scale(1);
+			-moz-transform: scale(1);
+			-ms-transform: scale(1);
+			-o-transform: scale(1);
+			transform: scale(1);
+			
+			box-shadow:none;
+		}
+		.box-blur:hover h1{
+			box-shadow:none;
+			text-shadow:none;
+			color:black;
+		}
+		.box-blur:hover h2{
+			box-shadow:none;
+			text-shadow:none;
+			color:white;
+		}
+		
+	</style>
+
+	<div id="shadow" class="panel">
+		<div class="text-shadow item">
+			Superwolf
+		</div>
+		<div class="box-shadow item">
+			Superwolf
+		</div>
+	</div>
+	<div id="blur" class="panel">
+		<div class="text-blur item">
+			Superwolf
+		</div>
+		<div class="box-blur-outer item">
+			<div class="box-blur">
+				<h1>superwolf</h1>
+				<h2>superwolf</h2>
+			<div>
+		</div>
+	</div>
+</html>

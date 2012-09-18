@@ -1,0 +1,5 @@
+.DS_Store
+.sass-cache/
+progress/
+approot/applicaiton/logs/*
+approot/applicaiton/cache/*
